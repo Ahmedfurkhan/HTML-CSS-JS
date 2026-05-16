@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS Fundamentals - Interactive Reference Guide</title>
+  <meta name="description" content="A hands-on reference covering the 10 most useful HTML tags, key SEO meta tags, div/span grids, the CSS box model, font sizing units, and all four positioning modes — with live demos.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Ahmed">
+  <link rel="canonical" href="https://example.com/html-css-fundamentals">
+  <meta property="og:title" content="HTML & CSS Fundamentals — Interactive Reference Guide">
+  <meta property="og:description" content="Live demos of HTML structure, SEO meta tags, CSS box model, font sizing, and positioning.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://example.com/og-preview.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="#top">HTML &amp; CSS</a>
+    <ul class="nav-links">
+      <li><a href="#html-tags">Tags</a></li>
+      <li><a href="#seo">SEO</a></li>
+      <li><a href="#grid">Grid</a></li>
+      <li><a href="#box-model">Box Model</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#positioning">Positioning</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <div class="page-hero">
+      <h1>HTML &amp; CSS <em>Fundamentals</em></h1>
+      <p class="hero-sub">A living reference — structure · SEO · layout · style</p>
+    </div>
+
+    <section id="html-tags">
+      <p class="sec-eyebrow">§ 01 — HTML Structure</p>
+      <h2>10 Most Useful HTML Tags</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">These ten tags appear in nearly every page ever written. Master them and you can build almost anything — the rest is specialisation.</p>
+
+      <div class="tags-grid">
+        <div class="tag-card">
+          <span class="tag-chip">&lt;div&gt;</span>
+          <div class="tag-body">
+            <h3>Division</h3>
+            <p>Generic block container with zero semantic meaning. The universal grouping tag for layout, JavaScript hooks, and styling regions.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;span&gt;</span>
+          <div class="tag-body">
+            <h3>Span</h3>
+            <p>Inline counterpart to <code>&lt;div&gt;</code>. Wraps a word or phrase to apply styles or attach event listeners without a line break.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;a&gt;</span>
+          <div class="tag-body">
+            <h3>Anchor</h3>
+            <p>Creates hyperlinks via <code>href</code>. Can link to pages, sections, emails (<code>mailto:</code>), or files. The backbone of the web.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;p&gt;</span>
+          <div class="tag-body">
+            <h3>Paragraph</h3>
+            <p>Semantic block for a run of prose text. Browsers add top and bottom margins by default, giving readable vertical rhythm.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;img&gt;</span>
+          <div class="tag-body">
+            <h3>Image</h3>
+            <p>Embeds an image via <code>src</code>. Always include <code>alt</code> text for accessibility and image-search SEO. Self-closing.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;ul&gt; / &lt;ol&gt;</span>
+          <div class="tag-body">
+            <h3>Lists</h3>
+            <p>Unordered (bullets) and ordered (numbered) lists. Items go in <code>&lt;li&gt;</code> children. Crucial for navigation menus and content lists.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;input&gt;</span>
+          <div class="tag-body">
+            <h3>Input</h3>
+            <p>Creates form controls — text, password, checkbox, radio, file upload, color picker, and more. Controlled via the <code>type</code> attribute.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;button&gt;</span>
+          <div class="tag-body">
+            <h3>Button</h3>
+            <p>A clickable element that triggers actions or form submission. Unlike <code>&lt;input type="button"&gt;</code>, it can contain rich HTML content.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;section&gt;</span>
+          <div class="tag-body">
+            <h3>Section</h3>
+            <p>Semantic block for a thematically grouped region. Helps screen readers and search engines understand page structure. Should contain an H2.</p>
+          </div>
+        </div>
+
+        <div class="tag-card">
+          <span class="tag-chip">&lt;meta&gt;</span>
+          <div class="tag-body">
+            <h3>Meta</h3>
+            <p>Lives in <code>&lt;head&gt;</code> and describes the page to browsers, search engines, and social platforms. Invisible to users; invaluable to crawlers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seo">
+      <p class="sec-eyebrow">§ 02 — SEO</p>
+      <h2>Key Head Tags for SEO</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">All eight tags below are live in the <code>&lt;head&gt;</code> of this very page. View source to inspect them. Sources: Search Engine Journal, SiteGround KB, Ahrefs (2024–2026).</p>
+
+      <div class="seo-stack">
+        <div class="seo-card">
+          <h3>&lt;title&gt;</h3>
+          <p><strong style="color:#e4e5ee">Most important SEO tag.</strong> The clickable headline in Google SERPs and a primary ranking signal. Keep it under ~60 characters, include your main keyword, and match it to your page's H1. Google may rewrite it if it judges your version misleading or too short/long.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>&lt;meta name="description"&gt;</h3>
+          <p>The 150–160 character blurb beneath the title in search results. Not a direct ranking factor, but a well-crafted description dramatically improves click-through rate (CTR), which indirectly signals relevance to Google. Write for humans first.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>H1–H6 Heading Tags</h3>
+          <p>Heading tags signal content hierarchy — not just visually but semantically. Use <em>exactly one</em> H1 per page (the page's topic), then H2–H6 for nested subtopics. Include relevant keywords naturally; heading content is a moderate direct ranking signal.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>&lt;meta name="robots"&gt;</h3>
+          <p>Instructs web crawlers. <code>content="index, follow"</code> — crawl and rank this page. <code>noindex</code> — exclude from results (use on admin, duplicate, or staging pages). <code>nofollow</code> — don't pass PageRank through links on this page.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>&lt;link rel="canonical"&gt;</h3>
+          <p>Solves duplicate-content problems. If the same content lives at multiple URLs (www vs non-www, with/without trailing slash, UTM parameters), canonical tells Google which is the "master" — consolidating link equity and preventing split ranking signals.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>&lt;meta name="viewport"&gt;</h3>
+          <p>Not a classic ranking meta tag, but Google uses mobile-friendliness as a ranking signal. <code>content="width=device-width, initial-scale=1.0"</code> ensures the page renders correctly on phones — without it, Google may down-rank your site in mobile search.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>Open Graph Tags (og:title, og:description, og:image)</h3>
+          <p>Control how your page looks when shared on Facebook, LinkedIn, Slack, etc. A compelling OG image + headline increases social shares → drives organic traffic → earns backlinks. Indirect but meaningful SEO benefit.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>&lt;meta charset="UTF-8"&gt;</h3>
+          <p>Ensures correct character encoding — preventing garbled text, especially for non-Latin scripts. Broken encoding confuses crawlers and destroys user experience, both of which hurt SEO. An indirect but foundational safeguard.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="grid">
+      <p class="sec-eyebrow">§ 03 — Layout Without Tables</p>
+      <h2>3×3 Grid: &lt;div&gt; + &lt;span&gt; Only</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">No <code>&lt;table&gt;</code>. No CSS Grid. No Flexbox. No float. Each row is a block <code>&lt;div&gt;</code>; each cell is a <code>&lt;span&gt;</code> with <code>display:inline-block</code> and <code>width:33.333%</code>. The parent's <code>font-size:0</code> eliminates whitespace gaps between inline-block elements (a classic pre-grid trick), and <code>font-size:1rem</code> restores it inside each cell.</p>
+
+      <div class="grid-wrapper">
+        <div style="display:block; width:100%; font-size:0;">
+          <span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#1a1d27; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#d4a853; margin-bottom:0.3rem;">R1 · C1</strong>
+            Top-Left
+          </span><span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#13151c; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#d4a853; margin-bottom:0.3rem;">R1 · C2</strong>
+            Top-Center
+          </span><span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#1a1d27; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#d4a853; margin-bottom:0.3rem;">R1 · C3</strong>
+            Top-Right
+          </span>
+        </div>
+
+        <div style="display:block; width:100%; font-size:0;">
+          <span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#13151c; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#6ec4d4; margin-bottom:0.3rem;">R2 · C1</strong>
+            Mid-Left
+          </span><span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#1a1d27; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#6ec4d4; margin-bottom:0.3rem;">R2 · C2</strong>
+            Center
+          </span><span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#13151c; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#6ec4d4; margin-bottom:0.3rem;">R2 · C3</strong>
+            Mid-Right
+          </span>
+        </div>
+
+        <div style="display:block; width:100%; font-size:0;">
+          <span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#1a1d27; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#e07060; margin-bottom:0.3rem;">R3 · C1</strong>
+            Bot-Left
+          </span><span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#13151c; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#e07060; margin-bottom:0.3rem;">R3 · C2</strong>
+            Bot-Center
+          </span><span style="display:inline-block; width:33.333%; font-size:1rem; vertical-align:top; background:#1a1d27; border:1px solid #252836; padding:2rem 1rem; text-align:center; color:#676d8a;">
+            <strong style="display:block; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:#e07060; margin-bottom:0.3rem;">R3 · C3</strong>
+            Bot-Right
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="box-model">
+      <p class="sec-eyebrow">§ 04 — CSS Box Model</p>
+      <h2>Box Model Gallery</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">Three rows — one per box-model property (border, margin, padding). Three columns — values of 0 px, 5 px, and 10 px. The gold box is the content area; surrounding space reveals each property's effect. The striped background on the margin row makes the outer spacing visible.</p>
+
+      <div class="bm-layout">
+        <div></div>
+        <div class="bm-col-head">0 px</div>
+        <div class="bm-col-head">5 px</div>
+        <div class="bm-col-head">10 px</div>
+
+        <div class="bm-row-head">Border</div>
+
+        <div class="bm-cell">
+          <div class="bm-box" style="border: 0px solid #d4a853; padding: 12px 16px;">border: 0px</div>
+        </div>
+        <div class="bm-cell">
+          <div class="bm-box" style="border: 5px solid #d4a853; padding: 12px 16px;">border: 5px</div>
+        </div>
+        <div class="bm-cell">
+          <div class="bm-box" style="border: 10px solid #d4a853; padding: 12px 16px;">border: 10px</div>
+        </div>
+
+        <div class="bm-row-head">Margin</div>
+
+        <div class="bm-cell margin-bg">
+          <div class="bm-box" style="margin: 0px; border: 1px solid #d4a853; padding: 12px 16px;">margin: 0</div>
+        </div>
+        <div class="bm-cell margin-bg">
+          <div class="bm-box" style="margin: 5px; border: 1px solid #d4a853; padding: 12px 16px;">margin: 5px</div>
+        </div>
+        <div class="bm-cell margin-bg">
+          <div class="bm-box" style="margin: 10px; border: 1px solid #d4a853; padding: 12px 16px;">margin: 10px</div>
+        </div>
+
+        <div class="bm-row-head">Padding</div>
+
+        <div class="bm-cell">
+          <div class="bm-box" style="padding: 0px; border: 1px solid #d4a853;">padding: 0</div>
+        </div>
+        <div class="bm-cell">
+          <div class="bm-box" style="padding: 5px; border: 1px solid #d4a853;">padding: 5px</div>
+        </div>
+        <div class="bm-cell">
+          <div class="bm-box" style="padding: 10px; border: 1px solid #d4a853;">padding: 10px</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="typography">
+      <p class="sec-eyebrow">§ 05 — CSS Typography</p>
+      <h2>6 Font-Size Units</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">Every row shows the same sentence at a different size unit — three absolute (fixed regardless of context) and three relative (scale with something else). All sized with <code>style=""</code> inline attributes.</p>
+
+      <ul class="font-stack" style="list-style: none; padding: 0;">
+
+        <li class="font-row">
+          <div class="font-meta">
+            <span class="font-tag">px — Absolute · 11px</span>
+            <span class="font-when"><strong style="color:#e4e5ee">Use when:</strong> you need pixel-perfect, context-independent sizing — a 1 px border, a 16 px icon, or a fixed-width UI element that must never scale.</span>
+          </div>
+          <span class="font-sample" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</span>
+        </li>
+
+        <li class="font-row">
+          <div class="font-meta">
+            <span class="font-tag">pt — Absolute · 14pt</span>
+            <span class="font-when"><strong style="color:#e4e5ee">Use when:</strong> targeting <em>print</em> stylesheets. 1 pt = 1/72 inch — meaningful on paper. On screens, prefer px or rem.</span>
+          </div>
+          <span class="font-sample" style="font-size: 14pt;">The quick brown fox jumps over the lazy dog.</span>
+        </li>
+
+        <li class="font-row">
+          <div class="font-meta">
+            <span class="font-tag">cm — Absolute · 0.5cm</span>
+            <span class="font-when"><strong style="color:#e4e5ee">Use when:</strong> you need physical measurements for print — e.g., the fine print on a legal document must be at least 0.3 cm. Almost never on screen.</span>
+          </div>
+          <span class="font-sample" style="font-size: 0.5cm;">The quick brown fox jumps over the lazy dog.</span>
+        </li>
+
+        <li class="font-row">
+          <div class="font-meta">
+            <span class="font-tag">rem — Relative · 1.125rem</span>
+            <span class="font-when"><strong style="color:#e4e5ee">Use when:</strong> sizing body text and most UI elements. 1 rem = browser root font-size (usually 16 px). Respects the user's browser font-size preference — best for accessibility.</span>
+          </div>
+          <span class="font-sample" style="font-size: 1.125rem;">The quick brown fox jumps over the lazy dog.</span>
+        </li>
+
+        <li class="font-row">
+          <div class="font-meta">
+            <span class="font-tag">em — Relative · 1.4em</span>
+            <span class="font-when"><strong style="color:#e4e5ee">Use when:</strong> sizing within a self-contained component — e.g., <code>padding: 0.5em 1em</code> on a button so its spacing always scales with <em>its own</em> font-size, not the root.</span>
+          </div>
+          <span class="font-sample" style="font-size: 1.4em;">The quick brown fox jumps over the lazy dog.</span>
+        </li>
+
+        <li class="font-row">
+          <div class="font-meta">
+            <span class="font-tag">vw — Relative · 2.4vw</span>
+            <span class="font-when"><strong style="color:#e4e5ee">Use when:</strong> creating fluid hero headings that scale from phone to desktop without any media queries. <code>clamp()</code> is often paired with vw to set a safe min/max.</span>
+          </div>
+          <span class="font-sample" style="font-size: 2.4vw;">The quick brown fox jumps over the lazy dog.</span>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="positioning">
+      <p class="sec-eyebrow">§ 06 — CSS Positioning</p>
+      <h2>4 Positioning Modes</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-desc">Four labeled boxes live inside the demo arena below, each using a different <code>position</code> value. The footer uses <code>fixed</code> to stay at the bottom of the screen at all times. The navbar uses <code>sticky</code> as a bonus 5th mode.</p>
+
+      <div class="pos-arena">
+
+        <div class="pos-box pos-absolute">position: <strong>absolute</strong><br><small style="font-weight:400; opacity:0.8;">top: 1.5rem · right: 1.5rem<br>of nearest positioned parent</small></div>
+
+        <div class="pos-box pos-static">position: <strong>static</strong><br><small style="font-weight:400; opacity:0.8;">default — normal flow<br>top/left have no effect</small></div>
+
+        <div class="pos-box pos-relative">position: <strong>relative</strong><br><small style="font-weight:400; opacity:0.8;">top: 18px · left: 28px<br>from its own natural spot</small></div>
+
+        <div class="pos-fixed-label">position: <strong>fixed</strong> ↓<br><small style="font-weight:400; opacity:0.8;">See the footer below —<br>it's fixed to the viewport</small></div>
+
+      </div>
+
+      <div class="pos-legend">
+
+        <div class="pos-legend-card" style="border-left: 3px solid #d4a853;"><h4 style="color:#d4a853;">static</h4><p>The factory default. The element follows the normal document flow and ignores <code>top</code>, <code>left</code>, etc. Use it when no special positioning is needed — which is most elements most of the time.</p></div>
+
+        <div class="pos-legend-card" style="border-left: 3px solid #6ec4d4;"><h4 style="color:#6ec4d4;">relative</h4><p>Nudges an element from <em>its own normal position</em> without removing it from the flow (other elements still see it in its original spot). Most importantly, it creates a positioned ancestor for <code>absolute</code> children — a pattern used constantly in UI work.</p></div>
+
+        <div class="pos-legend-card" style="border-left: 3px solid #e07060;"><h4 style="color:#e07060;">absolute</h4><p>Removed from normal flow entirely — surrounding elements ignore it. Positioned relative to the nearest ancestor that has a non-static position. Ideal for tooltips, notification badges, image overlays, and decorative shapes.</p></div>
+
+        <div class="pos-legend-card" style="border-left: 3px solid #7bbf88;"><h4 style="color:#7bbf88;">fixed</h4><p>Positioned relative to the <em>browser viewport</em> — stays perfectly still as the user scrolls. Used for persistent UI: cookie banners, floating action buttons, live chat widgets, and — as demonstrated here — the site footer and (as sticky) the navbar.</p></div>
+
+      </div>
+
+      <div class="pos-note"><strong style="color:#e4e5ee">Bonus — sticky:</strong> The <code>&lt;nav&gt;</code> at the top of this page uses <code>position: sticky; top: 0</code> — a fifth mode. It behaves like <code>relative</code> until it would scroll off-screen, then locks in place like <code>fixed</code>. Perfect for navigation bars; try scrolling to watch it stick.</div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-brand">HTML &amp; CSS Fundamentals</span>
+    <span class="footer-note">position: fixed · bottom: 0 · always visible</span>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
